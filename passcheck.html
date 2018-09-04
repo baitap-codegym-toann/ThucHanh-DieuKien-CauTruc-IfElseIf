@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passchecker</title>
+</head>
+<body>
+    <form>
+        Account:
+        <input id="acc" type="text"/><br>
+        Password:
+        <input id="pass" type="text"/>
+    </form>
+    <button type="button" onclick="check();">Login</button>
+    <script>
+        function check(){
+            let account = document.getElementById("acc").value;
+            let password = document.getElementById("pass").value;
+            if (account === "Admin"){
+                if ( password === "TheMaster"){
+                    alert("Wellcome");
+                }else{
+                    if (password === ""){
+                    alert("Canceled");
+                    }else{
+                        alert("Wrong password!!!");
+                    }
+                }
+            }else{
+                if(account === ""){
+                    alert("Canceled");
+                }else{
+                    alert ("I don't know you!!!");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
